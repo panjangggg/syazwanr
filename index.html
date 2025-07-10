@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ping -t syazwanr.my</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="me.jpg" type="image/jpeg" />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
@@ -44,19 +47,18 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 30px auto 60px;
       padding: 0 20px;
-      text-align: center;
     }
 
     .profile-section {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 40px;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
     img.profile {
@@ -66,13 +68,14 @@
       border-radius: 6px;
       background-color: black;
       border: 2px solid black;
+      flex-shrink: 0;
     }
 
     .social {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 0;
       align-items: flex-start;
     }
 
@@ -141,43 +144,10 @@
       font-size: 1.1em;
       line-height: 1.6;
       margin-top: 80px;
+      text-align: center;
     }
 
-    @media (max-width: 600px) {
-      .profile-section {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .social {
-        align-items: center;
-      }
-
-      .social-item {
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-      }
-
-      .desc {
-        max-width: 100%;
-      }
-
-      .social a {
-        font-size: 1.6rem;
-        padding: 5px 14px;
-      }
-
-      img.profile {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-      }
-    }
-
-
-    /* === Book Style Borders & Lines === */
-
+    /* === Book Style === */
     .book-frame {
       border: 14px solid #af302d;
       padding: 0;
@@ -187,7 +157,6 @@
       overflow: hidden;
     }
 
-    /* Decorative inner dotted vertical lines on left and right */
     .book-frame::before,
     .book-frame::after {
       content: "";
@@ -212,7 +181,6 @@
       right: 30px;
     }
 
-    /* Top bookmark ribbon */
     .bookmark-ribbon {
       position: absolute;
       top: 0;
@@ -221,6 +189,26 @@
       height: 100px;
       background-color: #0071ff;
       z-index: 1;
+    }
+
+    /* Responsive Fixes */
+    @media (max-width: 700px) {
+      .profile-section {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 24px;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .social {
+        align-items: flex-start;
+      }
+
+      .social a {
+        font-size: 1.3rem;
+        padding: 5px 12px;
+      }
     }
 
   </style>
@@ -233,8 +221,7 @@
     <header>
       <h1>pēǎčĕ bĕ ūpōń yǒū.</h1>
       <p>
-        I go by Syazwan Rosman. But most friends just yell “Panjang!”.<br>
-        I work in IT.
+        Hi, my name is Syazwan Rosman. But, somewhere along the way, “Panjang” became the default.
       </p>
     </header>
 
@@ -244,28 +231,24 @@
 
         <div class="social">
           <div class="social-item">
-            <a href="https://www.imdb.com/user/ur36705849" target="_blank" rel="noopener" title="IMDb">
+            <a href="https://www.imdb.com/user/ur36705849" target="_blank" title="IMDb">
               IMDb <span class="new-tab-icon" aria-hidden="true"></span>
             </a>
-            <span class="desc"></span>
           </div>
           <div class="social-item">
-            <a href="https://twitter.com/PANJANG__" target="_blank" rel="noopener" title="Twitter">
+            <a href="https://twitter.com/PANJANG__" target="_blank" title="Twitter">
               Twitter <span class="new-tab-icon" aria-hidden="true"></span>
             </a>
-            <span class="desc"></span>
           </div>
           <div class="social-item">
-            <a href="https://instagram.com/syazwan_rosman" target="_blank" rel="noopener" title="Instagram">
+            <a href="https://instagram.com/syazwan_rosman" target="_blank" title="Instagram">
               Instagram <span class="new-tab-icon" aria-hidden="true"></span>
             </a>
-            <span class="desc"></span>
           </div>
           <div class="social-item">
-            <a href="https://www.linkedin.com/in/syazwan-rosman-52a62a107" target="_blank" rel="noopener" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/syazwan-rosman-52a62a107" target="_blank" title="LinkedIn">
               LinkedIn <span class="new-tab-icon" aria-hidden="true"></span>
             </a>
-            <span class="desc"></span>
           </div>
         </div>
       </div>
@@ -279,7 +262,7 @@
       </p>
     </div>
 
-  </div> <!-- close .book-frame -->
+  </div>
 
 </body>
 </html>
