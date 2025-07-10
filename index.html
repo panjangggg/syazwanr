@@ -3,73 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me – Syazwan</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fonts similar to Rest of World style -->
+  <title>ping -t syazwanr.my</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="me.jpg" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
+    :root {
+      --primary-blue: #0014ff;
+      --text-color: #111;
+    }
+
     body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #111;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
+      background-color: #fff;
+    }
+
+    header {
+      border-top: 5px solid var(--primary-blue);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin: 0;
+      color: var(--primary-blue);
+      text-transform: none;
+    }
+
+    header p {
+      font-size: 1.1em;
     }
 
     .container {
       max-width: 800px;
-      margin: 60px auto;
+      margin: 40px auto;
       padding: 0 20px;
+      text-align: center;
     }
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin-bottom: 0.2em;
-    }
-
-    img {
+    img.profile {
       width: 180px;
       height: 180px;
       object-fit: cover;
       border-radius: 100px;
       display: block;
-      margin: 30px 0;
+      margin: 0 auto 20px;
+    }
+
+    .social {
+      margin: 20px 0;
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: var(--primary-blue);
+      font-size: 1.6em;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .social a:hover {
+      color: #000;
     }
 
     .bio {
       font-size: 1.1em;
-    }
-
-    .social a {
-      color: #111;
-      text-decoration: none;
-      margin-right: 15px;
-      font-weight: bold;
-    }
-
-    .social {
-      margin-top: 20px;
+      line-height: 1.6;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Syazwan R.</h1>
-    <img src="me.jpg" alt="Syazwan photo">
-    <p class="bio">
-      I'm a software tinkerer from Malaysia — passionate about clean code, beautiful web experiences, and automating the boring stuff.
-      <br><br>
-      When I’m not building apps or scripts, I’m probably gaming, exploring minimalist design, or overthinking font choices.
-    </p>
 
+  <header>
+    <h1>pēǎčĕ bĕ ūpōń yǒū.</h1>
+    <p>
+      I go by Syazwan Rosman. But most friends just yell “Panjang!”.<br>
+      I work in IT.
+    </p>
+  </header>
+
+  <div class="container">
+    <img src="me.jpg" alt="Syazwan Photo" class="profile">
+
+    <h2>Find Me Online</h2>
     <div class="social">
-      <a href="https://github.com/panjangggg" target="_blank">GitHub</a>
-      <a href="mailto:hello@syazwanr.my">Email</a>
-      <a href="https://linkedin.com/in/YOUR_ID" target="_blank">LinkedIn</a>
+      <a href="https://www.imdb.com/user/ur36705849" target="_blank" title="IMDb">
+        <i class="fab fa-imdb"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/syazwan-rosman-52a62a107" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/PANJANG__" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/syazwan_rosman" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
     </div>
+
+    <p class="bio">
+      I know no one asked,  
+but these are the best nasi lemak I’ve ever eaten:
+<br>
+1. Nasi Lemak Azhar (Temerloh, Pahang) <br> 
+2. Nasi Lemak Ujang Corner (Batu Caves, Selangor)
+    </p>
   </div>
+
 </body>
 </html>
