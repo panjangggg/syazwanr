@@ -51,21 +51,30 @@
       text-align: center;
     }
 
+    .profile-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
     img.profile {
       width: 180px;
       height: 180px;
       object-fit: cover;
       border-radius: 100px;
-      display: block;
-      margin: 0 auto 20px;
     }
 
     .social {
-      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
 
     .social a {
-      margin: 0 10px;
       color: var(--primary-blue);
       font-size: 1.6em;
       text-decoration: none;
@@ -81,6 +90,18 @@
       line-height: 1.6;
       margin-top: 30px;
     }
+
+    @media (max-width: 600px) {
+      .profile-section {
+        flex-direction: column;
+      }
+
+      .social {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -94,30 +115,31 @@
   </header>
 
   <div class="container">
-    <img src="me.jpg" alt="Syazwan Photo" class="profile">
+    <div class="profile-section">
+      <img src="me.jpg" alt="Syazwan Photo" class="profile">
 
-    <h2>Find Me Online</h2>
-    <div class="social">
-      <a href="https://www.imdb.com/user/ur36705849" target="_blank" title="IMDb">
-        <i class="fab fa-imdb"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/syazwan-rosman-52a62a107" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://twitter.com/PANJANG__" target="_blank" title="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/syazwan_rosman" target="_blank" title="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
+      <div class="social">
+        <a href="https://www.imdb.com/user/ur36705849" target="_blank" title="IMDb">
+          <i class="fab fa-imdb"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/syazwan-rosman-52a62a107" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/PANJANG__" target="_blank" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/syazwan_rosman" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
 
     <p class="bio">
-      I know no one asked,  
-but these are the best nasi lemak I’ve ever eaten:
-<br>
-1. Nasi Lemak Azhar (Temerloh, Pahang) <br> 
-2. Nasi Lemak Ujang Corner (Batu Caves, Selangor)
+      I know no one asked,<br>
+      but these are the best nasi lemak I’ve ever eaten:
+      <br><br>
+      1. Nasi Lemak Azhar (Temerloh, Pahang) <br> 
+      2. Nasi Lemak Ujang Corner (Batu Caves, Selangor)
     </p>
   </div>
 
