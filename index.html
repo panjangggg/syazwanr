@@ -26,6 +26,7 @@
       margin: 0;
       padding: 0;
       background-color: #fff;
+      overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
     }
 
     header {
@@ -57,8 +58,6 @@
       justify-content: center;
       align-items: flex-start;
       gap: 40px;
-      flex-wrap: nowrap;
-      overflow-x: auto;
     }
 
     img.profile {
@@ -191,23 +190,24 @@
       z-index: 1;
     }
 
-    /* Responsive Fixes */
+    /* === Responsive Fixes === */
     @media (max-width: 700px) {
       .profile-section {
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        flex-direction: column;
+        align-items: center;
         gap: 24px;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-
-      .social {
-        align-items: flex-start;
       }
 
       .social a {
         font-size: 1.3rem;
-        padding: 5px 12px;
+        padding: 5px 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .social a {
+        font-size: 1.1rem;
+        padding: 4px 10px;
       }
     }
 
